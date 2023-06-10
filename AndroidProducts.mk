@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_markw.mk
+    $(LOCAL_DIR)/spark_markw.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_markw-user \
-    lineage_markw-userdebug \
-    lineage_markw-eng
+    spark_markw-user \
+    spark_markw-userdebug \
+    spark_markw-eng
