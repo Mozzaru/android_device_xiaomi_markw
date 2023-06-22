@@ -21,12 +21,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from markw device
 $(call inherit-product, device/xiaomi/markw/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Pixys stuff.
+$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
+
+# Pixys Stuff
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := markw
-PRODUCT_NAME := lineage_markw
+PRODUCT_NAME := pixys_markw
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4 Prime
 PRODUCT_MANUFACTURER := Xiaomi
