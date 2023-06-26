@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_markw.mk
+    $(LOCAL_DIR)/octavi_markw.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_markw-user \
-    derp_markw-userdebug \
-    derp_markw-eng
+    octavi_markw-user \
+    octavi_markw-userdebug \
+    octavi_markw-eng
