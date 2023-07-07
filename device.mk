@@ -96,6 +96,15 @@ persist.sys.usb.config=mtp,adb
 # ANT
 PRODUCT_PACKAGES += \
     AntHalService
+    
+# ART
+DONT_DEXPREOPT_PREBUILTS := true
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := art/build/boot/boot-image-profile.txt
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+USE_DEX2OAT_DEBUG := false
+WITH_DEXPREOPT_DEBUG_INFO := false
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -201,7 +210,12 @@ PRODUCT_PACKAGES += \
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
-
+    
+# Dex preopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    DerpLauncherQuickStep \
+    Settings
+    
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey \

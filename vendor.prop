@@ -2,6 +2,22 @@
 # vendor.prop for markw
 #
 
+# ART
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.boot-dex2oat-threads=8
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.dex2oat-filter=speed-profile
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.image-dex2oat-filter=speed-profile
+dalvik.vm.image-dex2oat-threads=8
+dalvik.vm.restore-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.restore-dex2oat-threads=8
+dalvik.vm.systemuicompilerfilter=speed
+dalvik.vm.dex2oat-minidebuginfo=false
+dalvik.vm.minidebuginfo=false
+
 # Audio
 audio.deep_buffer.media=true
 audio.offload.min.duration.secs=30
@@ -76,6 +92,14 @@ persist.vendor.camera.display.lmax=1280x720
 persist.vendor.camera.display.umax=1920x1080
 persist.vendor.qti.telephony.vt_cam_interface=1
 vidc.enc.dcvs.extra-buff-count=2
+
+# Dalvik heap
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapgrowthlimit=192m
+dalvik.vm.heapsize=512m
+
+# Dexopt downgrade threshold
+pm.dexopt.downgrade_after_inactive_days=5
 
 # Display
 ro.hardware.vulkan=adreno
