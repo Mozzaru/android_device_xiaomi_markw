@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_markw.mk
+    $(LOCAL_DIR)/awaken_markw.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_markw-user \
-    derp_markw-userdebug \
-    derp_markw-eng
+    awaken_markw-user \
+    awaken_markw-userdebug \
+    awaken_markw-eng
