@@ -21,9 +21,6 @@ persist.vendor.data.mode=concurrent
 # Disable MTE Async for system server
 arm64.memtag.process.system_server=off
 
-# Dexopt
-dalvik.vm.dex2oat64.enabled=true
-
 # Display
 debug.egl.hw=0
 debug.enable.sglscale=1
@@ -127,6 +124,23 @@ persist.mm.sta.enable=0
 
 # WFD
 persist.hwc.enable_vds=1
+
+# ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
+
+# Additional props
+ro.vendor.qti.cgroup_follow.enable=true \
+persist.vendor.qti.inputopts.enable=true \
+persist.vendor.qti.inputopts.movetouchslop=0.6 \
+ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
+
+# Higher fling velocities
+# for smoother scrolling and better responsiveness
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.min.fling_velocity=160 \
+ro.max.fling_velocity=20000
 
 # Zygote
 zygote.critical_window.minute=10
