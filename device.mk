@@ -22,7 +22,7 @@ TARGET_BOARD_SUFFIX := _64
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-derp
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -458,10 +458,6 @@ PRODUCT_PACKAGES += \
 # Touch features
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.xiaomi_markw
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB HAL
 PRODUCT_PACKAGES += \
