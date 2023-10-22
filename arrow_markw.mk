@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017 The ArrowOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,12 +21,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from markw device
 $(call inherit-product, device/xiaomi/markw/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common ArrowOS stuff.
+$(call inherit-product, vendor/arrow/config/common.mk)
+
+# ArrowOS additions
+DEVICE_MAINTAINER := m@who
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := false
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := markw
-PRODUCT_NAME := lineage_markw
+PRODUCT_NAME := arrow_markw
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4 Prime
 PRODUCT_MANUFACTURER := Xiaomi
